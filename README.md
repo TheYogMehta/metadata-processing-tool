@@ -1,39 +1,57 @@
 # yt-ig-scraper
 
-A Python script for scraping public data from YouTube and Instagram, including likes, comments, and more.
+Automation tool for collecting and processing publicly available media metadata from YouTube and Instagram using Python, Selenium, and Flask.
 
 ## Features
 
-- Scrapes YouTube video/short metadata such as likes, comments, views, and more.
-- Scrapes Instagram posts and reels, including user profiles, captions, likes, comments, and featured comments.
+* Extracts metadata from YouTube videos and Shorts, including views, likes, comments, and related information.
+* Retrieves publicly available Instagram post and reel data such as captions, engagement metrics, and profile information.
+* Supports both command-line and browser-based interaction.
 
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-   git clone https://github.com/your-username/yt-ig-scraper.git
-   cd yt-ig-scraper
+git clone https://github.com/your-username/yt-ig-scraper.git
+cd yt-ig-scraper
 ```
 
-2. Install the required dependencies from requirements.txt
+2. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-# Usage
-## CLI Version
-To use the command-line interface (CLI) version of the scraper, run the following command:
+## Usage
+
+### CLI Version
+
+Run the command-line interface:
+
 ```bash
 python main.py
 ```
-This will start the CLI version of the scraper, allowing you to scrape data by entering the appropriate URLs for YouTube and Instagram.
 
-## Browser Version
-To use the browser-based version, run the following command:
+The CLI allows users to fetch metadata by providing supported YouTube or Instagram URLs.
+
+### Browser Version
+
+Start the Flask application:
+
 ```bash
 python api.py
 ```
-This will start a Flask server at http://127.0.0.1:5000/. You can visit this URL in your browser and enter the link to a YouTube video, YouTube short, Instagram post, or Instagram reel. The scraper will then retrieve and display information.
 
-# Notes
-This tool scrapes only public data from YouTube and Instagram. It does not access any private or restricted data.
+The application will run locally at:
+
+```bash
+http://127.0.0.1:5000/
+```
+
+Users can submit supported YouTube or Instagram links through the browser interface to retrieve metadata.
+
+## Notes
+
+* The tool processes only publicly accessible data.
+* No private or restricted platform information is accessed.
